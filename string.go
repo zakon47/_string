@@ -5,10 +5,11 @@ import (
 	"unicode/utf8"
 )
 
-func StringLeft (str string) []string {
+//получить строковую подстроку слева => string,symbols
+func StringLeft(str string) (string, string) {
 	str = strings.Trim(str, " ")
 	if len(str) == 0 {
-		return []string{"",""}
+		return "", ""
 	}
 	str = strings.ToLower(str)
 
@@ -29,12 +30,14 @@ func StringLeft (str string) []string {
 		symbol = str[pos:]
 		number = str[:pos]
 	}
-	return []string{number,symbol}
+	return number, symbol
 }
-func StringRight (str string) []string {
+
+//получить строковую подстроку справа => string,symbols
+func StringRight(str string) (string, string) {
 	str = strings.Trim(str, " ")
 	if len(str) == 0 {
-		return []string{"",""}
+		return "", ""
 	}
 	str = strings.ToLower(str)
 
@@ -55,5 +58,5 @@ func StringRight (str string) []string {
 		symbol = str[:pos]
 		number = str[pos:]
 	}
-	return []string{number,symbol}
+	return number, symbol
 }

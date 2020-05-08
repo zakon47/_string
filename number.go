@@ -5,10 +5,11 @@ import (
 	"unicode/utf8"
 )
 
-func NumberLeft (str string) []string {
+//получить числовую подстроку слева => num,symbols
+func NumberLeft(str string) (string, string) {
 	str = strings.Trim(str, " ")
 	if len(str) == 0 {
-		return []string{"",""}
+		return "", ""
 	}
 	str = strings.ToLower(str)
 
@@ -29,12 +30,14 @@ func NumberLeft (str string) []string {
 		symbol = str[pos:]
 		number = str[:pos]
 	}
-	return []string{number,symbol}
+	return number, symbol
 }
-func NumberRight (str string) []string {
+
+//получить числовую подстроку справа => num,symbols
+func NumberRight(str string) (string, string) {
 	str = strings.Trim(str, " ")
 	if len(str) == 0 {
-		return []string{"",""}
+		return "", ""
 	}
 	str = strings.ToLower(str)
 
@@ -55,5 +58,5 @@ func NumberRight (str string) []string {
 		symbol = str[:pos]
 		number = str[pos:]
 	}
-	return []string{number,symbol}
+	return number, symbol
 }
