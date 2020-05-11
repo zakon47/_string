@@ -1,4 +1,4 @@
-module github.com/zakon47/_strings
+module github.com/zakon47/_string
 
 go 1.13
 

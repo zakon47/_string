@@ -1,8 +1,8 @@
-package _strings_test
+package _string_test
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zakon47/_strings"
+	"github.com/zakon47/_string"
 	"testing"
 )
 
@@ -19,7 +19,7 @@ func TestNumberLeft(t *testing.T) {
 	}
 	for _, test := range data {
 		t.Run(test.name, func(t *testing.T) {
-			num, sym := _strings.NumberLeft(test.metka)
+			num, sym := _string.NumberLeft(test.metka)
 			assert.Equal(t, test.result, []string{num, sym})
 		})
 	}
@@ -38,7 +38,7 @@ func TestNumberRight(t *testing.T) {
 	}
 	for _, test := range data {
 		t.Run(test.name, func(t *testing.T) {
-			num, sym := _strings.NumberRight(test.metka)
+			num, sym := _string.NumberRight(test.metka)
 			assert.Equal(t, test.result, []string{num, sym})
 		})
 	}
@@ -56,7 +56,7 @@ func TestStringLeft(t *testing.T) {
 	}
 	for _, test := range data {
 		t.Run(test.name, func(t *testing.T) {
-			num, sym := _strings.StringLeft(test.metka)
+			num, sym := _string.StringLeft(test.metka)
 			assert.Equal(t, test.result, []string{num, sym})
 		})
 	}
@@ -74,7 +74,7 @@ func TestStringRight(t *testing.T) {
 	}
 	for _, test := range data {
 		t.Run(test.name, func(t *testing.T) {
-			num, sym := _strings.StringRight(test.metka)
+			num, sym := _string.StringRight(test.metka)
 			assert.Equal(t, test.result, []string{num, sym})
 		})
 	}

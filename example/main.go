@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/zakon47/_strings"
+	"github.com/zakon47/_string"
 	"log"
 )
 
-func main()  {
-	log.Println(_strings.StringLeft("xaxa33xaxa"))
+func main() {
+	log.Println(_string.StringLeft("xaxa33xaxa"))
 }
